@@ -15,8 +15,8 @@
 vendor/
 .idea
 go.sum
-/cmd/admin/admin
+/cmd/ng-admin/ng-admin
 /tmp
-
+internal/admin/swagger
 
 .vscode

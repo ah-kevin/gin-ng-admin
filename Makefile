@@ -1,6 +1,6 @@
 NOW = $(shell date -u '+%Y%m%d%I%M%S')
 RELEASE_VERSION = v0.0.0
-APP 			= admin
+APP 			= ng-admin
 SERVER_BIN  	= ./cmd/${APP}/${APP}
 RELEASE_ROOT 	= release
 RELEASE_SERVER 	= release/${APP}
@@ -12,6 +12,7 @@ RELEASE_TAG     = $(RELEASE_VERSION).$(GIT_COUNT).$(GIT_HASH)
 # init env
 init:
 	go get -u github.com/google/wire/cmd/wire
+	go get -u github.com/swaggo/swag/cmd/swag
 
 .PHONY: start
 # start
