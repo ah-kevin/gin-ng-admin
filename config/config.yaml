@@ -1,13 +1,11 @@
-# server
-Server:
-  # 运行模式(debug:调试,test:测试,release:正式)
-  run-mode: "debug"
-  # swagger
-  swagger: true
-  # 静态站点目录(也可以启动服务时使用-www指定)
-  www: ""
-  # 启动时是否打印配置参数
-  print-config: true
+# 运行模式(debug:调试,test:测试,release:正式)
+run-mode: "debug"
+# swagger
+swagger: true
+# 静态站点目录(也可以启动服务时使用-www指定)
+www: "web"
+# 启动时是否打印配置参数
+print-config: true
 
 # zap logger configuration
 Log:

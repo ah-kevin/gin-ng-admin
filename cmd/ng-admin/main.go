@@ -33,9 +33,9 @@ func newCmd(ctx context.Context) *cli.Command {
 		Usage: "运行web服务",
 		Flags: []cli.Flag{
 			&cli.StringFlag{
-				Name:     "conf",
+				Name:     "config",
 				Aliases:  []string{"c"},
-				Usage:    "配置文件(.json,.yaml,.toml)",
+				Usage:    "配置文件(.yaml)",
 				Required: false,
 			},
 			&cli.StringFlag{
@@ -54,7 +54,8 @@ func newCmd(ctx context.Context) *cli.Command {
 			},
 		},
 		Action: func(c *cli.Context) error {
-			return admin.Run(ctx)
+			return admin.Run(ctx,
+				admin.SetConfigFile(c.String("config")))
 		},
 	}
 }
